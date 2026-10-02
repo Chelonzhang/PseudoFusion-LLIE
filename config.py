@@ -1,0 +1,57 @@
+import torch
+
+
+class Config:
+    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    NUM_PSEUDO_FRAMES = 5
+    MAX_OFFSET = 5.0
+
+    VIL_HIDDEN_DIM = 48
+    VIL_DEPTH = 1
+    VIL_SEQ_LEN = 5
+    VIL_DOWNSCALE = 1
+    VIL_WINDOW_SIZE = 16
+
+    ZERO_SHOT_STEPS = 500
+    LR = 0.001
+    LR_MIN = 1e-5
+
+    LOSS_CONSIST = 1.0
+    LOSS_SPARSE = 1.0
+    LOSS_TV_TEXTURE = 0.2
+    LOSS_GRAY_WORLD = 0.5
+    LOSS_COLOR_DEVIATION = 0.3
+    LOSS_RESIDUAL_SPARSE = 0.02
+    LOSS_BRIGHT_PROTECT = 0.5
+    LOSS_RES_CHANNEL_ALIGN = 30.0
+    W_NOISE_BASE = 0.3
+    W_NOISE_STRENGTH = 0.7
+
+    LOSS_RECON = 0.0
+    LOSS_R_SPARSE = 0.0
+    LOSS_DENOISE = 0.0
+    LOSS_TEMP = 0.0
+
+    LOSS_BRIGHT = 0.0
+    LOSS_COLOR = 0.0
+    LOSS_FREQ = 0.0
+    LOSS_EXPOSURE = 1.0
+    LOSS_TV_ALPHA = 5.0
+
+    LOSS_L_PRIOR = 0.0
+    LOSS_L_SMOOTH = 0.0
+
+    RETINEX_METHOD = 'srie'
+    USE_PRE_SMOOTH = True
+    ENABLE_PSEUDO_SEQ = True
+    ENABLE_FLOW = True
+    ENABLE_FUSION = True
+    ENABLE_VIL = True
+
+    GAMMA = 2.2
+    L_ENHANCE_GAMMA = 0.6
+    L_ENHANCE_ALPHA = -1.0
+    L_ENHANCE_ITERS = 3
+    VIL_ALPHA_SCALE = 0.80
+    SAVE_DAY1_AVG = False

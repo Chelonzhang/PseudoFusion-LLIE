@@ -1,0 +1,11 @@
+# Python dependencies for the zero-shot low-light image enhancement pipeline.
+# Note: the SRIE Retinex decomposition is implemented in MATLAB and called via
+# the MATLAB Engine for Python (see README).
+torch>=1.13
+torchvision>=0.14
+numpy
+opencv-python
+einops
+
+# MATLAB Engine for Python (install separately, see README):
+# matlabengine    # or `matlab` depending on your MATLAB version
